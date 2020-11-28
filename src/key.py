@@ -4,6 +4,7 @@ from .FFT import TwistGen
 from .tlwe import tlweEncrypt
 from .trgsw import trgswEncrypt
 
+
 # TODO とりあえずコピペなので後で変える。
 
 class lweKey:
