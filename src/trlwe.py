@@ -4,6 +4,7 @@ from .FFT import PolyMul
 
 
 def trlweEncrypt(p, alpha, key, twist):
+    # 多分わかった
     a = np.array(dtype=np.uint32)
     for _ in range(len(key)):
         a = np.append(a, modularNormalDistribution(32))
@@ -13,10 +14,12 @@ def trlweEncrypt(p, alpha, key, twist):
 
 
 def trlweDecrypt(c, key, twist):
+    # 多分わかった
     return (1 + np.sign(np.int32(c[1] - PolyMul(c[0], key, twist)))) // 2
 
 
 def SampleExtractIndex(r, index):
+    # TODO もう一回確認する
     N = len(r[0])
     return np.concatenate(
         [[r[0][index - i] for i in range(index + 1)], [-r[0][N - 1 - i] for i in range(N - index - 1)], [r[1][index]]])

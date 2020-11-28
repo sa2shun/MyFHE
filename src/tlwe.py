@@ -16,7 +16,7 @@ def Encrypt(p, sk):
     :return: array
         EncryptText
     '''
-
+    # 多分わかった
     plaintextlength = len(p)
     c = np.empty((plaintextlength, sk.params.n + 1), dtype=np.uint32)
     for i in range(plaintextlength):
@@ -39,7 +39,7 @@ def Decrypt(c, sk):
     :return: array of 0 or 1
         plaintext
     '''
-
+    # 多分わかった
     ciphertextlength = len(c)
     p = np.empty((ciphertextlength, sk.params.n + 1), dtype=np.uint32)
     for i in range(ciphertextlength):
@@ -61,6 +61,7 @@ def tlweEncrypt(p, alpha, key):
 
     :return:
     '''
+    # 多分わかった
     a = np.array(dtype=np.uint32)
     for _ in range(len(key)):
         a = np.append(a, randbits(32))

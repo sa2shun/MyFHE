@@ -1,8 +1,8 @@
 import numpy as np
 from secrets import randbits
-from .mulfft import TwistGen
-from .tlwe import tlweSymEncrypt
-from .trgsw import trgswfftSymEncrypt
+from .FFT import TwistGen
+from .tlwe import tlweEncrypt
+from .trgsw import trgswEncrypt
 
 class lweKey:
     def __init__(self,n:int, N:int):
